@@ -1,0 +1,18 @@
+data1<- read.csv(file.choose(),header=T)
+names(data1)
+Fruits.vegetables<- data1[["Fruits.vegetables"]]
+Fruits.vegetables
+class(Fruits.vegetables)
+YearDec06 <- data1["Dec06",]
+YearDec06
+class(YearDec06)
+data1(5:10)
+head(data1,5)
+index<- data1$Food.Grains>100
+index
+index<- data1$Food.Grains>200
+index
+summary(data1)
+df<- data1
+df$Food.Grains<- ifelse(df$Food.Grains<250,"more than 250","less than 250")
+View(df)
